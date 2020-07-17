@@ -24,14 +24,14 @@ def question_j
 		  puts
     elsif choix == "2"
 	  	puts "2- Quelle est le handle le plus court de cette liste ?"
-		  puts journalist.sort_by { |word| word.length }.first
+      puts journalist.sort_by { |word| word.length }.first
 		  puts
     elsif choix == "3"
 		  puts "3- Combien y-a-t'il de handle contenant 5 caractères (le @ ne compte pas pour un caractère)"
 		  puts
     elsif choix == "4"
   		puts "4- Combien commencent par une majuscule (première lettre juste après le @) ?"
-	  	#puts journalist.count 
+	  	puts journalist.count {|journalist| journalist =~ /@[[:upper:]]/}
 		  puts
     elsif choix == "5"
   		puts "5- Trie la liste de handle par ordre alphabétique."
